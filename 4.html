@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+
+    <style>
+        /* Universal selector */
+        * {
+            font-family: Arial;
+        }
+
+        /* Element selector */
+        p {
+            color: blue;
+        }
+
+        /* ID selector */
+        #mainBox {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        /* Class selector */
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Group selector */
+        h1, h2 {
+            color: green;
+        }
+
+        /* Descendant selector */
+        div p {
+            background-color: #e3f2fd;
+        }
+         
+        div >span{
+            color: purple;
+        }
+
+        /* Adjacent sibling selector */
+        h2 + p {
+            color: yellow;
+        }
+
+        /* General sibling selector */
+        h2 ~ p {
+            font-style: italic;
+        }
+
+        /* Pseudo-class selector */
+        a:hover {
+            color: red;
+        }
+
+        /* Pseudo-element selector */
+        p::first-letter {
+            font-size: 25px;
+        }
+
+        /* Attribute selector */
+        input[type="text"] {
+            border: 2px solid green;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selector Forms</h1>
+
+    <div id="mainBox">
+        <p>This paragraph uses element and descendant selector</p>
+    </div>
+     <h2>Combinator</h2>
+    <p>This paragraph uses adjacent sibling selector</p>
+    <p>This paragraph uses general sibling selector</p>
+
+
+    <p class="highlight">This text uses class selector</p>
+
+    <a href="#">Hover over this link</a>
+    <br><br>
+
+    <input type="text" placeholder="Attribute selector example">
+
+   </body>
+</html>

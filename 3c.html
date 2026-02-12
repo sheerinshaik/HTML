@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Styles Example</title>
+
+  <!-- External style -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <!-- Internal style -->
+  <style>
+    div {
+      background-color: lightgray;   /* selector: div, property: background-color, value: lightgray */
+      padding: 10px;                 /* selector: div, property: padding, value: 10px */
+    }
+    span {
+      color: red;                    /* selector: span, property: color, value: red */
+      font-weight: bold;             /* selector: span, property: font-weight, value: bold */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- External style applied to h1 -->
+  <h1>Welcome to CSS Styling</h1>
+
+  <!-- External style applied to p -->
+  <p>This paragraph is styled using an external stylesheet.</p>
+
+  <!-- Internal style applied to div -->
+  <div>
+    This is a division styled using internal CSS.
+    <br>
+    Inside it, we have a <span>span element</span> styled internally.
+  </div>
+
+  <!-- Inline style -->
+  <p style="color: purple; font-size: 20px;">
+    This paragraph is styled using inline CSS.
+  </p>
+
+</body>
+</html>

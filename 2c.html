@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+        <form action="#" method="post">
+        <table border="1" cellpadding="8" cellspacing="0">
+       <caption><b>Fill in your details</b></caption>
+
+      <!-- Text Field -->
+      <tr>
+        <td>Full Name:</td>
+        <td><input type="text" name="fullname" required></td>
+      </tr>
+
+      <!-- Password Field -->
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password" required></td>
+      </tr>
+
+      <!-- Number Field -->
+      <tr>
+        <td>Age:</td>
+        <td><input type="number" name="age" min="1" max="120"></td>
+      </tr>
+
+      <!-- Date of Birth Field -->
+      <tr>
+        <td>Date of Birth:</td>
+        <td><input type="date" name="dob"></td>
+      </tr>
+
+      <!-- Radio Buttons -->
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="gender" value="Male"> Male
+          <input type="radio" name="gender" value="Female"> Female
+          <input type="radio" name="gender" value="Other"> Other
+        </td>
+      </tr>
+
+      <!-- Checkboxes -->
+      <tr>
+        <td>Interests:</td>
+        <td>
+          <input type="checkbox" name="interest" value="Web Development"> Web Development
+          <input type="checkbox" name="interest" value="Data Science"> Data Science
+          <input type="checkbox" name="interest" value="Gaming"> Gaming
+        </td>
+      </tr>
+
+      <!-- List Box -->
+      <tr>
+        <td>Country:</td>
+        <td>
+          <select name="country">
+            <option value="">--Select--</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Multi-select List Box -->
+      <tr>
+        <td>Skills (multi-select):</td>
+        <td>
+          <select name="skills" multiple size="4">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Textarea -->
+      <tr>
+        <td>Address:</td>
+        <td><textarea name="address" rows="4" cols="30"></textarea></td>
+      </tr>
+
+      <!-- Buttons -->
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
