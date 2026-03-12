@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Color Reference Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            padding: 20px;
+            margin: 10px 0;
+            color: white;
+        }
+
+        /* 1. Color Name */
+        .color-name {
+            background-color: red;
+        }
+
+        /* 2. Hexadecimal */
+        .hex {
+            background-color: #3498db;
+        }
+
+        /* 3. RGB */
+        .rgb {
+            background-color: rgb(46, 204, 113);
+        }
+
+        /* 4. RGBA (with transparency) */
+        .rgba {
+            background-color: rgba(155, 89, 182, 0.6);
+        }
+
+        /* 5. HSL */
+        .hsl {
+            background-color: hsl(39, 100%, 50%);
+        }
+
+        /* 6. HSLA (with transparency) */
+        .hsla {
+            background-color: hsla(200, 100%, 50%, 0.5);
+        }
+
+        /* 7. Transparent keyword color*/
+        .transparent {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+        }
+
+        /* 8. CurrentColor keyword */
+        .currentcolor {
+            color: teal;
+            border: 5px solid currentColor;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Different Ways to Reference Colors in CSS</h2>
+
+    <div class="box color-name">Color Name (red)</div>
+    <div class="box hex">Hexadecimal (#3498db)</div>
+    <div class="box rgb">RGB (rgb(46, 204, 113))</div>
+    <div class="box rgba">RGBA (rgba(155, 89, 182, 0.6))</div>
+    <div class="box hsl">HSL (hsl(39, 100%, 50%))</div>
+    <div class="box hsla">HSLA (hsla(200, 100%, 50%, 0.5))</div>
+    <div class="box transparent">Transparent</div>
+    <div class="box currentcolor">CurrentColor (border uses text color)</div>
+</body>
+</html>

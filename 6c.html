@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Different Ways to Take Input</title>
+
+    <script>
+        // 1. Using prompt()
+        function getPromptInput() {
+            var name = prompt("Enter your name:");
+            alert("Hello " + name + " (Input taken using prompt())");
+        }
+
+        // 2. Using text box
+        function getTextboxInput() {
+            var value = document.getElementById("textbox").value;
+            document.getElementById("output1").innerHTML =
+                "You entered: " + value + " (Input from Textbox)";
+        }
+
+        // 3. Using textarea
+        function getTextareaInput() {
+            var message = document.getElementById("textarea").value;
+            document.getElementById("output2").innerHTML =
+                "Message: " + message + " (Input from Textarea)";
+        }
+
+        // 4. Using dropdown
+        function getSelectInput() {
+            var course = document.getElementById("select").value;
+            document.getElementById("output3").innerHTML =
+                "Selected Course: " + course + " (Input from Dropdown)";
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>JavaScript Input Methods</h1>
+
+    <!-- 1. Prompt -->
+    <button onclick="getPromptInput()">Input using prompt()</button>
+    <br><br>
+
+    <!-- 2. Textbox -->
+    Enter your city:
+    <input type="text" id="textbox">
+    <button onclick="getTextboxInput()">Submit</button>
+    <p id="output1"></p>
+
+    <!-- 3. Textarea -->
+    Enter your feedback:
+    <br>
+    <textarea id="textarea"></textarea>
+    <br>
+    <button onclick="getTextareaInput()">Submit</button>
+    <p id="output2"></p>
+
+    <!-- 4. Dropdown -->
+    Select your course:
+    <select id="select">
+        <option value="BCA">BCA</option>
+        <option value="BSc">BSc</option>
+        <option value="BCom">BCom</option>
+    </select>
+    <button onclick="getSelectInput()">Submit</button>
+    <p id="output3"></p>
+
+</body>
+</html>

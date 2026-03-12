@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal and External JavaScript</title>
+ 
+    <!-- External JavaScript -->
+    <script src="external.js"></script>
+
+    <!-- Internal JavaScript -->
+    <script>
+        function showInternalMessage() {
+            alert("This message is from Internal JavaScript.");
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>JavaScript Example</h1>
+
+    <button onclick="showInternalMessage()">
+        Click for Internal JavaScript
+    </button>
+
+    <br><br>
+
+    <button onclick="showExternalMessage()">
+        Click for External JavaScript
+    </button>
+
+</body>
+</html>

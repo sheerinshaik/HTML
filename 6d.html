@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Eligibility</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        td {
+            background-color: #e6f2ff;
+        }
+    </style>
+
+    <script>
+        function voterInfo() {
+            // Ask for name
+            var name = prompt("Enter your name:");
+
+            // Ask for age
+            var age = prompt("Enter your age:");
+
+            // Validate age input
+            age = parseInt(age);
+            if (isNaN(age) || age < 0) {
+                alert("Please enter a valid age.");
+                return;
+            }
+
+            // Determine voting eligibility
+            var eligibility = age >= 18 ? "Yes, you can vote" : "No, you cannot vote";
+
+            // Create table dynamically
+            var tableHTML = "<table>";
+            tableHTML += "<tr><th>Name</th><th>Age</th><th>Eligibility</th></tr>";
+            tableHTML += "<tr><td>" + name + "</td><td>" + age + "</td><td>" + eligibility + "</td></tr>";
+            tableHTML += "</table>";
+
+            // Display table
+            document.getElementById("output").innerHTML = tableHTML;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Voter Eligibility Checker</h1>
+    <button onclick="voterInfo()">Enter Your Details</button>
+
+    <div id="output"></div>
+
+</body>
+</html>

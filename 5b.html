@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fixed Tilted Background Image</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 200vh; /* Makes page scrollable */
+}
+
+/* Background image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  height: 80vh;
+  background-image: url("https://tse2.mm.bing.net/th/id/OIP.YOyAbVJMIWMvagxwYLG5LgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"); /* Replace with your image */
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  transform: translate(-65%, -65%) rotate(0deg);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Page content */
+.content {
+  padding: 50px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="content">
+  <h1>Scrolling Page</h1>
+  <p>
+    Scroll up and down. The tilted background image stays fixed 
+    halfway down the page.
+  </p>
+  <p>
+    Add more content here to see the scrolling effect in action.
+  </p>
+</div>
+
+</body>
+</html>
