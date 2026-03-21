@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions Example</title>
+</head>
+<body>
+<script>
+
+function factorial(n) {
+    let fact = 1;
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+function fibonacci(n) {
+    let a = 0, b = 1, result = "";
+    for (let i = 1; i <= n; i++) {
+        result += a + " ";
+        let temp = a + b;
+        a = b;
+        b = temp;
+    }
+    return result;
+}
+
+function primeNumbers(n) {
+    let result = "";
+    for (let i = 2; i <= n; i++) {
+        let isPrime = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            result += i + " ";
+        }
+    }
+    return result;
+}
+
+function isPalindrome(n) {
+    let original = n.toString();
+    let reversed = original.split("").reverse().join("");
+    return original === reversed;
+}
+
+// Example Usage
+let num = parseInt(prompt("Enter a number:"));
+
+alert("Factorial: " + factorial(num));
+alert("Fibonacci: " + fibonacci(num));
+alert("Prime Numbers: " + primeNumbers(num));
+
+if (isPalindrome(num))
+    alert("It is a Palindrome");
+else
+    alert("It is Not a Palindrome");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object</title>
+</head>
+<body>
+
+<script>
+
+// Constructor
+function Student(name, age, marks) {
+    this.name = name;      // Property
+    this.age = age;
+    this.marks = marks;
+
+    // Method
+    this.display = function() {
+        return "Name: " + this.name + 
+               ", Age: " + this.age + 
+               ", Marks: " + this.marks;
+    };
+}
+
+// Object Creation
+let s1 = new Student("John", 20, 85);
+
+// Accessor (Getter & Setter)
+Object.defineProperty(s1, "grade", {
+    get: function() {
+        return this.marks >= 50 ? "Pass" : "Fail";
+    },
+    set: function(newMarks) {
+        this.marks = newMarks;
+    }
+});
+
+document.write(s1.display() + "<br>");
+document.write("Grade: " + s1.grade + "<br>");
+
+s1.grade = 40;   // Using setter
+document.write("Updated Marks: " + s1.marks + "<br>");
+document.write("Updated Grade: " + s1.grade + "<br>");
+
+</script>
+
+</body>
+</html>

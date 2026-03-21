@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object</title>
+</head>
+<body>
+
+<script>
+let pattern = /[A-Z]/g;
+let text = "JavaScript REGEX Example";
+
+document.write("Test Result: " + pattern.test(text) + "<br>");
+document.write("Match Result: " + text.match(pattern) + "<br>");
+
+let replaced = text.replace(pattern, "*");
+document.write("After Replace: " + replaced + "<br>");
+</script>
+
+</body>
+</html>

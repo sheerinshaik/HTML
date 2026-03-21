@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object</title>
+</head>
+<body>
+
+<h2 id="heading">Hello World</h2>
+<button onclick="changeContent()">Click Me</button>
+
+<script>
+function changeContent() {
+    document.title = "Document Object Example";
+    document.bgColor = "lightblue";
+    document.getElementById("heading").innerHTML = "Content Changed!";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function with Buttons</title>
+</head>
+<body>
+
+Enter Number: <input type="text" id="num"><br><br>
+
+<button onclick="showFactorial()">Factorial</button>
+<button onclick="showFibonacci()">Fibonacci</button>
+<button onclick="showPrime()">Prime</button>
+<button onclick="showPalindrome()">Palindrome</button>
+
+<h3 id="result"></h3>
+
+<script>
+
+function getValue() {
+    return parseInt(document.getElementById("num").value);
+}
+
+function showFactorial() {
+    let n = getValue();
+    let fact = 1;
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    document.getElementById("result").innerHTML = "Factorial: " + fact;
+}
+
+function showFibonacci() {
+    let n = getValue();
+    let a = 0, b = 1, output = "";
+    for (let i = 1; i <= n; i++) {
+        output += a + " ";
+        let temp = a + b;
+        a = b;
+        b = temp;
+    }
+    document.getElementById("result").innerHTML = "Fibonacci: " + output;
+}
+
+function showPrime() {
+    let n = getValue();
+    let output = "";
+    for (let i = 2; i <= n; i++) {
+        let isPrime = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            output += i + " ";
+        }
+    }
+    document.getElementById("result").innerHTML = "Prime Numbers: " + output;
+}
+
+function showPalindrome() {
+    let n = document.getElementById("num").value;
+    let reversed = n.split("").reverse().join("");
+    if (n === reversed)
+        document.getElementById("result").innerHTML = "It is a Palindrome";
+    else
+        document.getElementById("result").innerHTML = "It is Not a Palindrome";
+}
+
+</script>
+
+</body>
+</html>

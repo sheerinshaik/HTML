@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Loop</title>
+</head>
+<body>
+<script>
+    let person = {
+        name: "John",
+        age: 25,
+        city: "New York"
+    };
+    // for-in (Object)
+    document.write("<h3>For-in Loop:</h3>");
+    for (let key in person) {
+        document.write(key + " : " + person[key] + "<br>");
+    }
+    // forEach (Array)
+    document.write("<h3><br>forEach Loop:</h3>");
+    let arr = Object.entries(person);
+    arr.forEach(function(item) {
+        document.write(item[0] + " : " + item[1] + "<br>");
+    });
+
+    // for-of (Array)
+    document.write("<h3><br>For-of Loop:</h3>");
+    for (let [key, value] of Object.entries(person)) {
+        document.write(key + " : " + value + "<br>");
+    }
+</script>
+</body>
+</html>
